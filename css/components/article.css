@@ -127,7 +127,7 @@ article code {
   margin-left: 2px;
   margin-right: 2px;
   color: #c7254e;
-  white-space: nowrap;
+  white-space: normal;
   border-radius: 0;
 }
 article p {

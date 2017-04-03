@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Misaghlb</title>
+  <subtitle>بلاگ من</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://misaghlb.github.com/"/>
+  <updated>2017-01-10T19:24:25.482Z</updated>
+  <id>https://misaghlb.github.com/</id>
+  
+  <author>
+    <name>Misagh Lotfi</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>چگونه در پروژه های اوپن سورس همکاری کنیم</title>
+    <link href="https://misaghlb.github.com/2017/01/Contributing%20to%20Open%20Source%20on%20GitHub/"/>
+    <id>https://misaghlb.github.com/2017/01/Contributing to Open Source on GitHub/</id>
+    <published>2017-01-10T18:23:53.000Z</published>
+    <updated>2017-01-10T19:24:25.482Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;سلام همینطور که از عنوان مشخصه، میخوام مقداری درباره اوپن سورس حرف بزنم و اینکه چطور میتونیم در پروژه های متن باز همکاری کنیم. در این پست
+    
+    </summary>
+    
+    
+      <category term="open source" scheme="https://misaghlb.github.com/tags/open-source/"/>
+    
+      <category term="git" scheme="https://misaghlb.github.com/tags/git/"/>
+    
+      <category term="github" scheme="https://misaghlb.github.com/tags/github/"/>
+    
+      <category term="collabrate" scheme="https://misaghlb.github.com/tags/collabrate/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JSON Web Tokens در مقابل Session Cookies بخش دوم</title>
+    <link href="https://misaghlb.github.com/2016/12/JSON-Web-Tokens-vs-Session-Cookies2/"/>
+    <id>https://misaghlb.github.com/2016/12/JSON-Web-Tokens-vs-Session-Cookies2/</id>
+    <published>2016-12-15T05:46:00.000Z</published>
+    <updated>2016-12-15T05:54:55.102Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;۳-RESTful-API-Services&quot;&gt;&lt;a href=&quot;#۳-RESTful-API-Services&quot; class=&quot;headerlink&quot; title=&quot;۳. RESTful API Services&quot;&gt;&lt;/a&gt;۳. RESTful API Serv
+    
+    </summary>
+    
+    
+      <category term="Token، session،rest،restful،authentication" scheme="https://misaghlb.github.com/tags/Token%D8%8C-session%D8%8Crest%D8%8Crestful%D8%8Cauthentication/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JSON Web Tokens در مقابل Session Cookies</title>
+    <link href="https://misaghlb.github.com/2016/09/JSON-Web-Tokens-vs-Session-Cookies/"/>
+    <id>https://misaghlb.github.com/2016/09/JSON-Web-Tokens-vs-Session-Cookies/</id>
+    <published>2016-09-02T17:00:16.000Z</published>
+    <updated>2016-09-08T14:43:56.204Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;JSON Web Token  &amp;rlm;( JWT )  یک استاندارد باز &amp;rlm;(&lt;a href=&quot;https://tools.ietf.org/html/rfc7519&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RFC 751
+    
+    </summary>
+    
+    
+      <category term="Token، session،rest،restful،authentication" scheme="https://misaghlb.github.com/tags/Token%D8%8C-session%D8%8Crest%D8%8Crestful%D8%8Cauthentication/"/>
+    
+  </entry>
+  
+</feed>
