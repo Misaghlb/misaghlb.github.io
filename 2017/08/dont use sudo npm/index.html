@@ -111,14 +111,14 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config get prefix</div></pre></td></tr></table></figure>
 <p>برای بیشتر سیستم ها خروجی اینه : usr/local/ .</p>
 <h5 id="اگر-خروجی-شما-usr-بود-این-راه-رو-ادامه-ندید-و-به-روش-دوم-برید"><a href="#اگر-خروجی-شما-usr-بود-این-راه-رو-ادامه-ندید-و-به-روش-دوم-برید" class="headerlink" title="اگر خروجی شما usr/  بود این راه رو ادامه ندید و به روش دوم برید."></a><code>اگر خروجی شما usr/  بود این راه رو ادامه ندید و به روش دوم برید.</code></h5><p>حالا کافیه تا با این دستور owner دایرکتوری ها رو به یوزر خودتون تغییر بدید:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chown -R $(whoami) $(npm config get prefix)/lib/node_modules,bin,share&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chown -R $(whoami) $(npm config get prefix)/&#123;lib/node_modules,bin,share&#125;</div></pre></td></tr></table></figure>
 <h3 id="راه-حل-دوم‌-تغییر-دایرکتوری-پیشفرض"><a href="#راه-حل-دوم‌-تغییر-دایرکتوری-پیشفرض" class="headerlink" title="راه حل دوم‌: تغییر دایرکتوری پیشفرض"></a>راه حل دوم‌: تغییر دایرکتوری پیشفرض</h3><p>شاید گاهی اوقات نخواهید که طبق روش بالا owner پوشه ها رو تغییر بدین مثلا  اگر از سیستمی استفاده میکنید که چند یوزر داره با تغییر مالک دایرکتوری ها، بقیه یوزرها به مشکل برمیخورند.</p>
 <p>توی این روش، یک دایرکتوری مخفی توی هوم درست میکنیم و به npm میگیم که از این به بعد این مسیر درسته.</p>
 <p>یک دایرکتوری توی هوم درست میکنیم:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir ~/.npm-global</div></pre></td></tr></table></figure>
 <p>به npm میگیم این مسیر جدید هست:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config <span class="built_in">set</span> prefix <span class="string">'~/.npm-global'</span></div></pre></td></tr></table></figure>
-<p>حالا توی فایل  ~/.profile این خط رو اضافه میکنیم:‌(اگر وجود نداشت درستش کنین)</p>
+<p>حالا توی فایل &lrm;<code>~/.profile</code> &lrm; این خط رو اضافه میکنیم:‌(اگر وجود نداشت درستش کنین)</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> PATH=~/.npm-global/bin:<span class="variable">$PATH</span></div></pre></td></tr></table></figure>
 <p>خب تموم شد حالا برای تست میتونین یک پکیج بصورت گلوبال دانلود کنین:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g jshint</div></pre></td></tr></table></figure>
