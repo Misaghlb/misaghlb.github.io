@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>از sudo npm استفاده نکنیم | Misaghlb | بلاگ من</title>
+
+  
+  <meta name="author" content="Misagh Lotfi">
+  
+
+  
+  <meta name="description" content="بلاگی برای باهم بودن">
+  
+
+  
+  
+  <meta name="keywords" content="npm, node, nodejs">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="از sudo npm استفاده نکنیم"/>
+
+  <meta property="og:site_name" content="Misaghlb"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Misaghlb" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <script src="/js/jdate.min.js"></script>
+  <script src="/js/jquery-3.2.0.min.js"></script>
+
+
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">Misaghlb</a>
+    </h1>
+    <p class="site-description">بلاگ من</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">خانه</a></li>
+      
+        <li><a href="/archives">آرشیو</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    
+<article>
+
+  
+    
+    <h3 class="article-title"><span>از sudo npm استفاده نکنیم</span></h3>
+    
+  
+
+
+
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/08/dont use sudo npm/" rel="bookmark">
+        <time id="ddd" class="entry-date published" datetime="2017-08-03T09:39:39.000Z">
+
+        </time>
+      </a>
+    </span>
+  </div>
+          <script>
+                jjj = new JDate(new Date('2017-08-03T09:39:39.000Z'));
+                $("#ddd").text(jjj.getFullYear() + '/' + (jjj.getMonth() + 1  )+ '/' + jjj.getDate());
+         </script>
+
+
+  
+      
+
+  <div class="article-content">
+    <div class="entry">
+        <p>توی این پست میخونیم که چرا نباید npm را با دسترسی روت اجرا کرد و چه خطری داره و در پایان هم میبینیم که راه حل چیه.</p>
+<p>برای نصب Node و Npm چندین روش وجود داره :</p>
+<ul>
+<li>استفاده از <a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a>  در مک</li>
+<li>استفاده  <a href="https://github.com/creationix/nvm" target="_blank" rel="external">Node Version Manager</a></li>
+<li>استفاده  از نصب کننده (<a href="https://nodejs.org/" target="_blank" rel="external">installer</a>) سایت رسمی نود</li>
+</ul>
+<p>خب دو روش اول امن هستند و نیازی به استفاده از sudo ندارن ولی راه حل سوم، راه ترین روش هست ولی امن ترین روش نیست. چرا؟</p>
+<p>چون اگر بخواهید پکیجی را بصورت گلوبال نصب کنید مجبورید دسترسی روت رو هم بهش بدید برای مثال:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo</div></pre></td></tr></table></figure>
+<h3 id="چه-مشکلی-داره-؟"><a href="#چه-مشکلی-داره-؟" class="headerlink" title="چه مشکلی داره ؟"></a>چه مشکلی داره ؟</h3><p>در کل شما تا جایی که میتونید و ضروری نیست نباید برنامه ها رو با دسترسی روت اجرا کنید. در اینجا هم node و npm هم بدون دسترسی ادمین میتونن به درستی کار کنند. حالا اگر دسترسی روت بهشون بدیم مثلا سرور رو با روت اجرا کنیم ، اگر روزی سرور هک شد هکر میتونه به تمام سیستم دسترسی پیدا کنه.</p>
+<h3 id="راه-حل-چیه؟"><a href="#راه-حل-چیه؟" class="headerlink" title="راه حل چیه؟"></a>راه حل چیه؟</h3><p>خوشبختانه چندتا راه حل ساده داره :</p>
+<h3 id="راه-حل-اول-تغییر-پرمیژن-دایرکتوری-پیشفرض-npm"><a href="#راه-حل-اول-تغییر-پرمیژن-دایرکتوری-پیشفرض-npm" class="headerlink" title="راه حل اول: تغییر پرمیژن دایرکتوری پیشفرض npm"></a>راه حل اول: تغییر پرمیژن دایرکتوری پیشفرض npm</h3><p>اول با این دستور دایرکتوری پیشفرض رو پیدا میکنیم:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config get prefix</div></pre></td></tr></table></figure>
+<p>برای بیشتر سیستم ها خروجی اینه : usr/local/ .</p>
+<h5 id="اگر-خروجی-شما-usr-بود-این-راه-رو-ادامه-ندید-و-به-روش-دوم-برید"><a href="#اگر-خروجی-شما-usr-بود-این-راه-رو-ادامه-ندید-و-به-روش-دوم-برید" class="headerlink" title="اگر خروجی شما usr/  بود این راه رو ادامه ندید و به روش دوم برید."></a><code>اگر خروجی شما usr/  بود این راه رو ادامه ندید و به روش دوم برید.</code></h5><p>حالا کافیه تا با این دستور owner دایرکتوری ها رو به یوزر خودتون تغییر بدید:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chown -R $(whoami) $(npm config get prefix)/lib/node_modules,bin,share&#125;</div></pre></td></tr></table></figure>
+<h3 id="راه-حل-دوم‌-تغییر-دایرکتوری-پیشفرض"><a href="#راه-حل-دوم‌-تغییر-دایرکتوری-پیشفرض" class="headerlink" title="راه حل دوم‌: تغییر دایرکتوری پیشفرض"></a>راه حل دوم‌: تغییر دایرکتوری پیشفرض</h3><p>شاید گاهی اوقات نخواهید که طبق روش بالا owner پوشه ها رو تغییر بدین مثلا  اگر از سیستمی استفاده میکنید که چند یوزر داره با تغییر مالک دایرکتوری ها، بقیه یوزرها به مشکل برمیخورند.</p>
+<p>توی این روش، یک دایرکتوری مخفی توی هوم درست میکنیم و به npm میگیم که از این به بعد این مسیر درسته.</p>
+<p>یک دایرکتوری توی هوم درست میکنیم:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir ~/.npm-global</div></pre></td></tr></table></figure>
+<p>به npm میگیم این مسیر جدید هست:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config <span class="built_in">set</span> prefix <span class="string">'~/.npm-global'</span></div></pre></td></tr></table></figure>
+<p>حالا توی فایل  ~/.profile این خط رو اضافه میکنیم:‌(اگر وجود نداشت درستش کنین)</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> PATH=~/.npm-global/bin:<span class="variable">$PATH</span></div></pre></td></tr></table></figure>
+<p>خب تموم شد حالا برای تست میتونین یک پکیج بصورت گلوبال دانلود کنین:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g jshint</div></pre></td></tr></table></figure>
+<h3 id="راه-حل-سوم"><a href="#راه-حل-سوم" class="headerlink" title="راه حل سوم:"></a>راه حل سوم:</h3><p>راه حل سوم هم برای مک هستش که اگر تازه میخواین node رو نصب کنین میتونین از Homebrew استفاده کنین که بطور خودکار با پرمیژن های صحیح براتون نصبش میکنه.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install node</div></pre></td></tr></table></figure>
+<p>امیدوارم مفید بوده باشه. 😉 😉</p>
+
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/npm-node-nodejs/">npm, node, nodejs</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+          
+
+</article>
+
+  
+
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    قدرت یافته توسط <a href="https://hexo.io/" target="_blank">Hexo</a> و
+    تم <a href="https://github.com/hexo-persian/themes/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2017 Misagh Lotfi
+    
+  </p>
+</footer>
+
+    
+  </div>
+</div>
+</body>
+</html>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://misaghlb.github.com/"/>
-  <updated>2017-01-10T19:24:25.482Z</updated>
+  <updated>2017-08-03T12:40:23.763Z</updated>
   <id>https://misaghlb.github.com/</id>
   
   <author>
@@ -16,11 +16,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>از sudo npm استفاده نکنیم</title>
+    <link href="https://misaghlb.github.com/2017/08/dont%20use%20sudo%20npm/"/>
+    <id>https://misaghlb.github.com/2017/08/dont use sudo npm/</id>
+    <published>2017-08-03T09:39:39.000Z</published>
+    <updated>2017-08-03T12:40:23.763Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;توی این پست میخونیم که چرا نباید npm را با دسترسی روت اجرا کرد و چه خطری داره و در پایان هم میبینیم که راه حل چیه.&lt;/p&gt;
+&lt;p&gt;برای نصب Node و
+    
+    </summary>
+    
+    
+      <category term="npm, node, nodejs" scheme="https://misaghlb.github.com/tags/npm-node-nodejs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>چگونه در پروژه های اوپن سورس همکاری کنیم</title>
     <link href="https://misaghlb.github.com/2017/01/Contributing%20to%20Open%20Source%20on%20GitHub/"/>
     <id>https://misaghlb.github.com/2017/01/Contributing to Open Source on GitHub/</id>
     <published>2017-01-10T18:23:53.000Z</published>
-    <updated>2017-01-10T19:24:25.482Z</updated>
+    <updated>2017-05-21T15:47:36.197Z</updated>
     
     <summary type="html">
     
@@ -62,7 +81,7 @@
     <link href="https://misaghlb.github.com/2016/09/JSON-Web-Tokens-vs-Session-Cookies/"/>
     <id>https://misaghlb.github.com/2016/09/JSON-Web-Tokens-vs-Session-Cookies/</id>
     <published>2016-09-02T17:00:16.000Z</published>
-    <updated>2016-09-08T14:43:56.204Z</updated>
+    <updated>2016-09-08T14:43:56.205Z</updated>
     
     <summary type="html">
     

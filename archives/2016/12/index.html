@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016/12 | Misaghlb | بلاگ من</title>
+  <title>آرشیو : 2016/12 | Misaghlb | بلاگ من</title>
 
   
   <meta name="author" content="Misagh Lotfi">
@@ -30,6 +30,10 @@
   <link href="/favicon.ico" rel="icon">
   <link rel="alternate" href="/atom.xml" title="Misaghlb" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <script src="/js/jdate.min.js"></script>
+  <script src="/js/jquery-3.2.0.min.js"></script>
+
+
 </head>
 
 
@@ -51,8 +55,6 @@
       
         <li><a href="/archives">آرشیو</a></li>
       
-        <li><a href="/atom.xml">RSS</a></li>
-      
     </ul>
   </nav>
 </header>
@@ -65,12 +67,22 @@
   <h2 class="article-title ">2016/12</h2>
 
   <div class="archive">
+      <script>
+        let j ;
+      </script>
+         
     
       <div class="post archive">
         <div class="archive-post">
           <time datetime="2016-12-15T05:46:00.000Z">
-            <a href="/2016/12/JSON-Web-Tokens-vs-Session-Cookies2/">2016-12-15</a>
+            <a id="ddd1" href="/2016/12/JSON-Web-Tokens-vs-Session-Cookies2/"></a>
           </time>
+
+          <script>
+                j = new JDate(new Date('2016-12-15T05:46:00.000Z'));
+                $("#ddd1").text(j.getFullYear() + '/' + (j.getMonth() + 1  )+ '/' + j.getDate());
+         </script>
+
           
             <h3 class="archive-title"><a href="/2016/12/JSON-Web-Tokens-vs-Session-Cookies2/"><span>JSON Web Tokens در مقابل Session Cookies بخش دوم</span></a></h3>
           
@@ -82,14 +94,14 @@
   
 </nav>
   </div>
-
 </article>
+
     </main>
 
     <footer class="site-footer">
   <p class="site-info">
-    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
-    Theme by <a href="https://github.com/Misaghlb/Hacker-persian" target="_blank">Hacker</a>
+    قدرت یافته توسط <a href="https://hexo.io/" target="_blank">Hexo</a> و
+    تم <a href="https://github.com/hexo-persian/themes/Hacker" target="_blank">Hacker</a>
     </br>
     
     &copy; 2017 Misagh Lotfi
